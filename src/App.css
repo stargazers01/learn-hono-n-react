@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,37 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+div.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+div.container div.form-container{
+  width: 30em;
+  height: 20em;
+  position: relative;
+  border-radius: 1em;
+  box-shadow: 0 0.300em 1.588em rgb(100, 156, 156);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > div.wrap {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
 }
