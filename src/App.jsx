@@ -2,13 +2,17 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+// import Auth from './presentation/pages/auth'
+import AuthPages from './presentation/pages/auth'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import RegisterPages from './presentation/pages/register'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
+      {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -27,7 +31,16 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
+      </p> */}
+      {/* <AuthPages /> */}
+
+      {/* main code */}
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<AuthPages/>} />
+          <Route path='/register' element={<RegisterPages/>}/>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
